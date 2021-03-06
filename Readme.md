@@ -213,8 +213,8 @@ SELECT * FROM test;
   - 读写分离：
 - ### go操作MySQL
     - 使用的第三方库：  
-go get  
-go get
+go get github.com/go-sql-driver/mysql
+go get github.com/jmoiron/sqlx
 ## Redis
 - ### 概述
 - ### 数据类型
