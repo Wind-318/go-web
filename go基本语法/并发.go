@@ -1,0 +1,38 @@
+//开启协程和并发控制
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+//声明一个等待组
+var wg sync.WaitGroup
+
+func hello(ch chan int) error {
+	fmt.Println("开始执行")
+	/*
+		执行的操作
+		有错误返回error
+	*/
+	//执行完任务后取出管道中的一个值，使得管道中有空位
+	<-ch
+	//等待组计数减一
+	wg.Done()
+	//没有错误，返回nil
+	return nil
+}
+
+func main() {
+	ch := make(chan int, 10)
+	for i := 0; i < 100; i++ {
+		//等待组计数加一
+		wg.Add(1)
+		//并发控制，管道中最多有10个数，剩下的协程将被阻塞，等待进入管道
+		ch <- 1
+		//使用go关键字开启一个协程，主线程继续向后执行
+		go hello(ch)
+	}
+	//等待所有任务执行完毕
+	wg.Wait()
+}
