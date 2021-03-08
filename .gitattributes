@@ -1,3 +1,0 @@
-*.sql linguist-language=sql
-*.go linguist-language=go
-*.cpp linguist-language=c++
