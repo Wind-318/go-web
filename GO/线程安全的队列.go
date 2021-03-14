@@ -1,41 +1,3 @@
-## 练习：
-- ### [实现生产者消费者模型](生产者消费者.go)
-案例（仅供参考）：
-```go
-package main
-
-import "fmt"
-
-func producer(ch chan<- int) {
-	//生产者一共生产200个物品
-	for i := 0; i < 200; i++ {
-		//如果缓冲区满则阻塞
-		ch <- i
-	}
-	//关闭管道，通知消费者结束任务
-	close(ch)
-}
-
-func consumer(ch <-chan int) {
-	//开始消费，如果缓冲区空则阻塞
-	for i := range ch {
-		fmt.Println(i)
-	}
-}
-
-func main() {
-	//缓冲区为100容量
-	ch := make(chan int, 100)
-	//生产者开始生产
-	go producer(ch)
-	//消费者开始消费
-	consumer(ch)
-}
-```
-
-- ### [实现一个线程安全的队列](线程安全的队列.go)
-案例（仅供参考）：
-```go
 package main
 
 import (
@@ -137,16 +99,3 @@ func main() {
 
 	fmt.Println("\n", data)
 }
-```
-
-- ### [实现一个无锁队列](无锁队列.go)
-案例（仅供参考）：
-```go
-
-```
-
-- ### [实现一个线程池](线程池.go)
-案例（仅供参考）：
-```go
-
-```
