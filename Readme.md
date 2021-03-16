@@ -12,7 +12,7 @@
 > ### [实现一个无锁队列](GO/无锁队列.go)
 > ### [实现一个线程池](GO/Go%20Web开发/线程池.go)
 - ## [Go连接数据库](数据库/MySQL/go操作mysql.md)
-- # go web开发(待更新)
+- # Go Web开发(待更新)
   - ## [Http](GO/Go%20Web开发/http.md)
     - ### GET请求
     - ### POST请求
@@ -21,7 +21,23 @@
     - ### Gin框架
     - ### Beego框架
 ***
-# C++攻略(待更新)
+# C++攻略
+- ## STL
+  - ### vector
+  - ### list
+  - ### stack
+  - ### queue
+    - ### deque
+    - ### priority_queue
+  - ### set
+    - ### unordered_set
+    - ### multiset
+    - ### unordered_multiset
+  - ### map
+    - ### multimap
+    - ### unordered_map
+    - ### unordered_multimap
+  - ### algorithm
 ***
 # Python攻略
 - ## [基本数据类型](Python/基本数据类型.md)
@@ -35,9 +51,10 @@
   - ### Django
 
 ***
-# Java攻略(待更新)
+# Java攻略
+- ## 并发
 ***
-# 数据结构与算法(待更新)
+# 数据结构与算法
 - ## 基本数据结构
   - [链表](数据结构与算法/链表/链表.md)
   - [栈](数据结构与算法/栈/栈.md)
@@ -74,7 +91,7 @@
 > - ### 事务和ACID
 > - ### 并发时的问题
 > - ### 隔离级别
-## MySQL(待更新)
+## MySQL
 - ### [索引](数据库/MySQL/索引.md)
   - B树和B+树
   - MySQL索引
