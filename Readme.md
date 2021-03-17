@@ -23,7 +23,7 @@
 ***
 # C++攻略
 - ## STL
-  - ### vector
+  - ### [vector](C++/STL/vector/vector创建和使用.md)
   - ### list
   - ### stack
   - ### queue
