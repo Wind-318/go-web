@@ -26,7 +26,8 @@
     vary: accept-encoding
     x-frame-options: SAMEORIGIN
     ```
-- ### URL：统一资源定位符，例如：https://cn.bing.com/
+- ### URI：统一资源标识符，用来标识一个资源是什么
+- ### URL：统一资源定位符，用来定位一个资源，例如：https://cn.bing.com/
 - ### 请求方法
   - #### Get：向服务器获取资源
   - #### Head：只返回响应头的get请求
