@@ -3,20 +3,20 @@
 - 创建容器，添加元素，遍历容器
 ```C++
 #include <iostream>
-//引入vector头文件
+// 引入 vector 头文件
 #include <vector>
 using namespace std;
 
 int main() 
 {
-	//创建一个int类型的vector
+	// 创建一个 int 类型的 vector
 	vector<int> v;
 	for (int i = 0; i < 100; i++) 
 	{
-		//使用emplace_back方法将值添加到vector尾部
+		// 使用 emplace_back 方法将值添加到 vector 尾部
 		v.emplace_back(i);
 	}
-	//使用for循环遍历，auto关键字自动推导类型
+	// 使用 for 循环遍历，auto 关键字自动推导类型
 	for (const auto& val : v)
 	{
 		cout << val << endl;
@@ -26,13 +26,13 @@ int main()
 }
 ```
 
-- vector几种初始化方法
+- vector 几种初始化方法
 ```C++
-    //创建含有100个元素的v1，默认值为0
+    // 创建含有 100 个元素的 v1，默认值为 0
     vector<int> v1(100);
-    //创建含有100个元素的v2，默认值为2
+    // 创建含有 100 个元素的 v2，默认值为 2
 	vector<int> v2(100, 2);
-    //将v2拷贝赋值给v3
+    // 将 v2 拷贝赋值给 v3
 	vector<int> v3(v2);
 
 	for (int i = 0; i < 100; i++)
@@ -41,7 +41,7 @@ int main()
 	}
 ```
 
-- vector的常用方法
+- vector 的常用方法
 ```C++
 
 ```

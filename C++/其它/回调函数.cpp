@@ -21,7 +21,7 @@ int main() {
 	Sort s;
 	vector<int> a{3, 1, 5, 6, 0, 3, 1, -35, -23, 132, 61, -320};
 
-    //通过自定义仿函数定义排序规则
+    // 通过自定义仿函数定义排序规则
 	s.quickSort<int>(a, 0, a.size() - 1, myCom());
 
 	for (const auto& i : a) {
@@ -30,7 +30,7 @@ int main() {
 
 	cout << endl;
 
-    //通过匿名函数自定义排序规则
+    // 通过匿名函数自定义排序规则
 	s.quickSort<int>(a, 0, a.size() - 1, [](const auto& a, const auto& b)->bool {return a <= b; });
 
 	for (const auto& i : a) {
@@ -39,7 +39,7 @@ int main() {
 	return 0;
 }
 
-//支持自定义排序的快排，默认排序规则从小到大排序
+// 支持自定义排序的快排，默认排序规则从小到大排序
 template<class T>
 void Sort::quickSort(vector<T>& arr, int left, int right, function<bool(T, T)> const& f) {
 	if (left >= right) {
