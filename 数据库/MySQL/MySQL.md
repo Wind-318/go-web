@@ -57,3 +57,7 @@
   - 将一个表按行切分到多个表中
 - ## 垂直切分
   - 将一个表按列切分到多个表中
+***
+# 参考
+- #### [MySQL 教程 | 菜鸟教程](https://www.runoob.com/mysql/mysql-tutorial.html)
+- #### [MySQL](https://github.com/CyC2018/CS-Notes/blob/master/notes/MySQL.md)

@@ -75,18 +75,17 @@
 - ## HASH
 | 命令 | 作用 |
 | :--: | :--: |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| HDEL key field1 field2 | 删除多个字段 |
+| HEXISTS key field | 查看指定字段是否存在 |
+| HGET key field | 获得指定字段的值 |
+| HGETALL key | 获得 key 的所有字段和值 |
+| HKEYS key | 获得指定 key 的所有字段 |
+| HVALS key | 获得指定 key 的所有值 |
+| HLEN key | 获得指定 key 所有字段的数量 |
+| HMGET key field1 field2 | 获取所有给定字段的值 |
+| HMSET key field1 value1 field2 value2 | 设置多个 key value |
+| HSET key field value | 设置指定字段的值 |
+| HSETNX key field value | 如果字段不存在才设置值 |
   - 示例
   > hset test name1 张三
   1
@@ -124,34 +123,42 @@
 - ## SET
 | 命令 | 作用 |
 | :--: | :--: |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| SADD key member1 member2 | 添加多个成员 |
+| SCARD key | 获得集合的成员数 |
+| SDIFF key1 key2 | 返回 key1 和 其它给定集合 的差异 |
+| SDIFFSTORE destination key1 key2 | 返回所有给定集合的差异并存储在 destination 中 |
+| SINTER key1 key2 | 返回所有给定集合的交集 |
+| SINTERSTORE destination key1 key2 | 返回所有给定集合的交集并存储在 destination 中 |
+| SUNION key1 key2 | 返回给定集合的并集 |
+| SUNIONSTORE destination key1 key2 | 返回所有给定集合的并集并存储在 destination 中 |
+| SISMEMBER key member | 判断 member 是否是 key 的成员 |
+| SMEMBERS key | 返回集合中所有成员 |
+| SMOVE source destination member | 将 member 从 source 移动到 destination |
+| SPOP key | 移除并返回集合中的一个随机成员 |
+| SREM key member1 member2 | 移除多个成员 |
+| SRANDMEMBER key count | 返回集合中多个随机数 |
   - 示例
 - ## ZSET
 | 命令 | 作用 |
 | :--: | :--: |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| ZADD key score1 member1 score2 member2 | 向有序集合添加多个成员 |
+| ZCARD key | 获取有序集合的成员数 |
+| ZCOUNT key min max | 计算指定区间分数的成员数 |
+| ZINTERSTORE destination key1 key2 | 计算多个集合交集并存储在 destination 中 |
+| ZUNIONSTORE destination numkeys key1 key2 | 计算多个集合并集，存储在 destination 中 |
+| ZLEXCOUNT key min max | 计算指定区间成员数量 |
+| ZRANGE key start stop | 通过索引区间返回指定区间成员 |
+| ZRANGEBYLEX key min max | 通过字典区间返回指定成员 |
+| ZRANGEBYSCORE key min max | 通过分数返回指定区间成员 |
+| ZRANK key member | 返回集合中指定成员索引 |
+| ZREM key member1 member2 | 移除集合中一个或多个成员 |
+| ZREMRANGEBYLEX key min max | 移除集合中给定字典区间所有成员 |
+| ZREMRANGEBYRANK key start stop | 移除给定排名区间所有成员 |
+| ZREMRANGEBYSCORE key min max | 移除集合中给定分数区间所有成员 |
+| ZREVRANGE key start stop | 通过索引返回指定区间成员，分数从高到低 |
+| ZREVRANGEBYSCORE key max min | 返回集合中指定分数区间成员，分数从高到低 |
+| ZREVRANK key member | 返回集合中指定成员的排名，按分数从大到小排 |
+| ZSCORE key member | 返回成员分数值 |
   - 示例
 # 持久化
 - ## RDB
@@ -172,3 +179,7 @@
   - 大量请求访问一个热点 Key 时，Key 突然失效，大量请求直接打在数据库上，造成数据库压力过大。
   - **解决方法：**
     - 延长热点 Key 过期时间或者不设置过期时间
+***
+# 参考
+- #### [Redis](https://github.com/CyC2018/CS-Notes/blob/master/notes/Redis.md)
+- #### [Redis 教程 | 菜鸟教程 - RUNOOB.COM](https://www.runoob.com/redis/redis-tutorial.html)

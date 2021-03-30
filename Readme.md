@@ -1,5 +1,6 @@
 # 后端开发攻略(笔记)
-# 目录
+***
+## [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines/blob/master/README.zh-CN.md)
 ## Golang攻略
 - ### [基本数据类型](GO/基本类型.md)
 - ### [条件语句和循环](GO/条件语句与循环.md)
@@ -81,6 +82,8 @@
   - [滑动窗口](数据结构与算法/滑动窗口/滑动窗口.md)
   - [分治](数据结构与算法/分治/分治.md)
 - ## [其它](数据结构与算法/其它.md)
+- ## 参考
+  - #### [Leetcode](https://leetcode-cn.com/problemset/all/)
 ***
 # Linux攻略(待更新)
 ***
@@ -88,6 +91,8 @@
 - ## [单例模式](设计模式/单例模式/单例模式.md)
 - ## [简单工厂模式](设计模式/简单工厂/简单工厂.md)
 - ## [工厂模式](设计模式/工厂模式/工厂模式.md)
+- ## 参考
+  - #### [设计模式 | 菜鸟教程 - RUNOOB.COM](https://www.runoob.com/design-pattern/design-pattern-tutorial.html)
 ***
 # 数据库
 ***
@@ -119,6 +124,9 @@
 - ## [进程与线程](操作系统/进程与线程.md)
 - ## [内存管理](操作系统/内存管理.md)
 - ## [死锁](操作系统/死锁.md)
+- ## 参考
+  - #### 现代操作系统（原书第 4 版）/（荷）Andrew S. Tanenbaum，（荷）Herbert Bos 著；陈向群等译. 一北京：机械工业出版社，2017.7
+  - #### [计算机操作系统](https://github.com/CyC2018/CS-Notes/blob/master/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%20-%20%E7%9B%AE%E5%BD%95.md)
 ## 
 ***
 # 计算机网络
@@ -130,6 +138,10 @@
 - ## [应用层](计算机网络/应用层.md)
 - ## [Http](计算机网络/HTTP.md)
 - ## Socket
+- ## 参考
+  - #### JamesF.Kurose, KeithW.Ross, 库罗斯, 等. 计算机网络: 自顶向下方法 [M]. 机械工业出版社, 2014.
+  - #### W.RichardStevens. TCP/IP 详解. 卷 1, 协议 [M]. 机械工业出版社, 2006.
+  - #### [计算机网络](https://github.com/CyC2018/CS-Notes/blob/master/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%20-%20%E7%9B%AE%E5%BD%95.md)
 ***
 # 编译原理(待更新)
 ***
