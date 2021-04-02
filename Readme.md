@@ -4,7 +4,7 @@
 ***
 ## [Markdown 基本语法](https://github.com/younghz/Markdown)
 ***
-## Golang攻略
+## Golang 攻略
 - ### [基本数据类型](GO/基本类型.md)
 - ### [条件语句和循环](GO/条件语句与循环.md)
 - ### 反射与类型断言
@@ -15,15 +15,15 @@
   - ### [实现一个线程安全的队列](GO/线程安全的队列.go)
   - ### [实现一个无锁队列](GO/无锁队列.go)
   - ### [实现一个线程池](GO/Go%20Web开发/线程池.go)
-- ## Go连接数据库
-- ## Go Web开发
-  - ### Web框架
-    - #### Gin框架
-    - #### Beego框架
-- ## Go可视化库
+- ## Go 连接数据库
+- ## Go Web 开发
+  - ### Web 框架
+    - #### Gin 框架
+    - #### Beego 框架
+- ## Go 可视化库
   - ### Echarts
 ***
-# C++攻略
+# C++ 攻略
 - ## STL
   - ### [vector](C++/STL/vector/vector创建和使用.md)
   - ### list
@@ -43,21 +43,21 @@
 - ## 其它
   - ### [回调函数](C++/其它/回调函数.cpp)
 ***
-# Python攻略
+# Python 攻略
 - ## [基本数据类型](Python/基本数据类型.md)
 - ## [生成器](Python/生成器.md)
 - ## 文件操作
 - ## [并发](Python/并发.md)
-- ## Python连接数据库
-- ## Web开发
+- ## Python 连接数据库
+- ## Web 开发
 - ## 爬虫
-- ## Web框架
+- ## Web 框架
   - ### Django
 - ## 爬虫框架
   - ### Scrapy
 
 ***
-# Java攻略
+# Java 攻略
 - ## 并发
 ***
 # 数据结构与算法
@@ -88,7 +88,7 @@
 - ## 参考
   - #### [Leetcode](https://leetcode-cn.com/problemset/all/)
 ***
-# Linux攻略(待更新)
+# Linux 攻略(待更新)
 ***
 # 设计模式
 - ## [单例模式](设计模式/单例模式/单例模式.md)

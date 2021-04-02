@@ -23,14 +23,18 @@
 | STRLEN key | 获得 key 对应值（字符串）的长度 |
 | APPEND key value | 如果 key 已存在，将 value 追加到原来的 value 上 |
   - 示例：
-  > set name 张三
-  OK
-  > get name
-  张三
-  > del name
-  1
-  > get name
+  > set name 张三  
+  OK  
+
+  > get name  
+  张三  
+
+  > del name  
+  1  
+
+  > get name  
   null
+
 - ## LIST
 | 命令 | 作用 |
 | :--: | :--: |
@@ -46,32 +50,43 @@
 | LSET key index value | 通过索引设置元素的值 |
 | LTRIM key start end | 只保留从 start 到 end 范围的值，其它部分移除 |
   - 示例
-  > rpush TestKey name1
-  1
-  > rpush TestKey name2
-  2
-  > lrange TestKey 0 -1
-  name1
-  name2
-  > lpush TestKey name3
-  3
-  > lrange TestKey 0 -1
-  name3
-  name1
-  name2
-  > rpop TestKey
-  name2
-  > lrange TestKey 0 -1
-  name3
-  name1
-  > lpop TestKey
-  name3
-  > lrange TestKey 0 -1
-  name1
-  > llen TestKey
-  1
-  > Lindex TestKey 0
-  name1
+  > rpush TestKey name1  
+  1  
+
+  > rpush TestKey name2  
+  2  
+
+  > lrange TestKey 0 -1  
+  name1  
+  name2  
+
+  > lpush TestKey name3  
+  3  
+
+  > lrange TestKey 0 -1  
+  name3  
+  name1  
+  name2  
+
+  > rpop TestKey  
+  name2  
+
+  > lrange TestKey 0 -1  
+  name3  
+  name1  
+
+  > lpop TestKey  
+  name3  
+
+  > lrange TestKey 0 -1  
+  name1  
+
+  > llen TestKey  
+  1  
+
+  > Lindex TestKey 0  
+  name1  
+
 - ## HASH
 | 命令 | 作用 |
 | :--: | :--: |
@@ -87,39 +102,48 @@
 | HSET key field value | 设置指定字段的值 |
 | HSETNX key field value | 如果字段不存在才设置值 |
   - 示例
-  > hset test name1 张三
+  > hset test name1 张三  
   1
-  > hmset test name2 李四 name3 王五 name4 114514 name5 老八
+
+  > hmset test name2 李四 name3 王五 name4 114514 name5 老八  
   OK
-  > hgetall test
-  name1
-  张三
-  name2
-  李四
-  name3
-  王五
-  name4
-  114514
-  name5
-  老八
-  > hdel test name1
+
+  > hgetall test  
+  name1  
+  张三  
+  name2  
+  李四  
+  name3  
+  王五  
+  name4  
+  114514  
+  name5  
+  老八 
+
+  > hdel test name1  
   1
-  > hget test name1
+
+  > hget test name1  
   null
-  > hget test name2
+
+  > hget test name2  
   李四
-  > hkeys test
-  name2
-  name3
-  name4
-  name5
-  > hlen test
-  4
-  > hvals test
-  李四
-  王五
-  114514
-  老八
+
+  > hkeys test  
+  name2  
+  name3  
+  name4  
+  name5 
+
+  > hlen test  
+  4 
+
+  > hvals test  
+  李四  
+  王五  
+  114514  
+  老八  
+  
 - ## SET
 | 命令 | 作用 |
 | :--: | :--: |
