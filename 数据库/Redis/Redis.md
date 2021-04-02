@@ -162,6 +162,38 @@
 | SREM key member1 member2 | 移除多个成员 |
 | SRANDMEMBER key count | 返回集合中多个随机数 |
   - 示例
+> sadd name 野兽先辈 Deep♂Dark♂Fantacy  
+2
+
+> smembers name  
+Deep♂Dark♂Fantacy  
+野兽先辈
+
+> spop name  
+野兽先辈
+
+> sadd name 野兽先辈 Deep♂Dark♂Fantacy  
+2
+
+> smembers name  
+Deep♂Dark♂Fantacy  
+野兽先辈
+
+> spop name  
+野兽先辈
+
+> sadd name1 老八秘制小汉堡 野兽 先辈 野兽先辈  
+4
+
+> sdiff name name1  
+Deep♂Dark♂Fantacy
+
+> sdiff name1 name  
+先辈  
+野兽  
+野兽先辈  
+老八秘制小汉堡
+
 - ## ZSET
 | 命令 | 作用 |
 | :--: | :--: |
