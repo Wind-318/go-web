@@ -216,6 +216,22 @@ Deep♂Dark♂Fantacy
 | ZREVRANK key member | 返回集合中指定成员的排名，按分数从大到小排 |
 | ZSCORE key member | 返回成员分数值 |
   - 示例
+> zadd age 18 路人甲 20 龙套乙  
+2
+
+> zscore age 路人甲  
+18
+
+> zrevrank age 路人甲  
+1
+
+> zrevrank age 龙套乙  
+0
+
+> zrange age 0 -1  
+路人甲  
+龙套乙
+
 # 持久化
 - ## RDB
 - ## AOF
