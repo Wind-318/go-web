@@ -46,8 +46,11 @@
 # Python 攻略
 - ## [基本数据类型](Python/基本数据类型.md)
 - ## [生成器](Python/生成器.md)
-- ## 文件操作
+- ## [文件操作](Python/文件操作.md)
 - ## [并发](Python/并发.md)
+- ## 三方库
+  - ### [jieba](https://github.com/fxsjy/jieba)
+  - ### [wordcloud](Python/第三方库/wordcloud.md)
 - ## Python 连接数据库
 - ## Web 开发
 - ## 爬虫
