@@ -41,7 +41,7 @@
     - ### unordered_multimap
   - ### algorithm
 - ## 其它
-  - ### [回调函数](C++/其它/回调函数.cpp)
+  - ### [实现自定义排序规则](C++/其它/回调函数.cpp)
 ***
 # Python 攻略
 - ## [基本数据类型](Python/基本数据类型.md)
