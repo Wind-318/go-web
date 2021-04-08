@@ -91,7 +91,8 @@
 - ## 参考
   - #### [Leetcode](https://leetcode-cn.com/problemset/all/)
 ***
-# Linux 攻略(待更新)
+# Linux 攻略
+- TODO
 ***
 # 设计模式
 - ## [单例模式](设计模式/单例模式/单例模式.md)
@@ -143,13 +144,16 @@
   - #### W.RichardStevens. TCP/IP 详解. 卷 1, 协议 [M]. 机械工业出版社, 2006.
   - #### [计算机网络](https://github.com/CyC2018/CS-Notes/blob/master/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%20-%20%E7%9B%AE%E5%BD%95.md)
 ***
-# 编译原理(待更新)
+# 编译原理
+- TODO
 ***
 # [分布式与集群](集群.md)
 ***
-# 消息队列(待更新)
+# 消息队列
+- TODO
 ***
-# 中间件(待更新)
+# 中间件
+- TODO
 ***
 # 缓存
 - ## [Redis](缓存/Redis/Redis.md)
@@ -159,4 +163,5 @@
   - ### 缓存问题
 - ## Memcached
 ***
-# 容器(待更新)
+# 容器
+- TODO
