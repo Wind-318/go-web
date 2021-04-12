@@ -237,12 +237,24 @@ Deep♂Dark♂Fantacy
   - 将数据放在断电后不会丢失的设备中。
 - ## RDB
   - Redis 默认的持久化方式，在指定的时间间隔内将内存中数据持久化到硬盘中。
+  - **save 命令**：阻塞当前进程，直到 RDB 完成。
+  - **bgsave 命令**：主进程会 fork 一个子进程完成保存，阻塞时间短。
+  - 优点：
+    - RDB 加载速度快，定时备份。
+  - 缺点：
+    - 丢失数据按分钟计，不适用于实时性要求高的场景
 - ## AOF
   - 记录下之前所有的写指令，在下次启动时再次执行一遍这些指令。
+  - AOF 重写：数据量会一直增加，定期重写可以减少无用数据增加。每次遍历所有数据，加入文件中。
+  - 优点
+    - 性能影响小
+  - 缺点：
+    - 加载速度慢
+    - 文件体积大
 # 主从复制
 # 哨兵
 # 集群
-# 跳跃表
+# 跳表
 # 过期时间与淘汰策略
 # 缓存问题
 - ## 缓存雪崩
@@ -263,3 +275,4 @@ Deep♂Dark♂Fantacy
 # 参考
 - #### [Redis](https://github.com/CyC2018/CS-Notes/blob/master/notes/Redis.md)
 - #### [Redis 教程 | 菜鸟教程 - RUNOOB.COM](https://www.runoob.com/redis/redis-tutorial.html)
+- #### [Redis的持久化机制](https://zhuanlan.zhihu.com/p/77646963)
