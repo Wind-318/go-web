@@ -29,16 +29,8 @@
   - ### list
   - ### stack
   - ### queue
-    - ### deque
-    - ### priority_queue
   - ### set
-    - ### unordered_set
-    - ### multiset
-    - ### unordered_multiset
   - ### map
-    - ### multimap
-    - ### unordered_map
-    - ### unordered_multimap
   - ### algorithm
 - ## 其它
   - ### [实现自定义排序规则](C++/其它/回调函数.cpp)
@@ -46,6 +38,7 @@
 # Python 攻略
 - ## [基本数据类型](Python/基本数据类型.md)
 - ## [生成器](Python/生成器.md)
+- ## [Turtle 库](Python/Turtle库.md)
 - ## [文件操作](Python/文件操作.md)
 - ## [并发](Python/并发.md)
 - ## 三方库
