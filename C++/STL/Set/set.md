@@ -206,6 +206,14 @@ int main() {
 	}
     ```
 - ### set 自定义键值
+  - #### set 定义
+    ```C++
+	template <
+	class _Kty, 
+	class _Pr = less<_Kty>, 		
+	class _Alloc = allocator<_Kty>
+	>
+	```
   - #### set 存储自定义键值可以通过重载小于运算符实现
     ```C++
 	#include <iostream>
