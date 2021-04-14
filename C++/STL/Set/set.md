@@ -81,7 +81,7 @@ int main() {
   - 首先看一下 unordered_set 的定义：
 	```C++
 	template <
-	class _Kty, 		// 键值
+	class _Kty, 			// 键值
 	class _Hasher = hash<_Kty>, 		// 哈希函数
 	class _Keyeq = equal_to<_Kty>, 		// 比较函数
 	class _Alloc = allocator<_Kty>		// 分配器
