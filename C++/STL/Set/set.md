@@ -255,3 +255,6 @@ int main() {
 		return 0;
 	}
 	```
+***
+# 参考
+- #### [C++ STL set容器完全攻略](http://c.biancheng.net/view/7192.html)
