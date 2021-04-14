@@ -58,6 +58,25 @@ int main() {
 	return 0;
 }
 ```
+- ### 方法
+| 方法 | 作用 | 函数原型 |
+| :--: | :--: | :--: |
+| count(Keyval) | 查找 Keyval 个数 | size_t count(const int& _Keyval) const |
+| contains(Keyval) | 查找 Keyval 是否存在 | size_t contains(const int& _Keyval) const |
+| begin() | 返回指向容器中第一个元素的迭代器(还有一个 const 版本) | iterator begin() noexcept |
+| end() | 返回指向容器中最后一个位置的**后一个位置**的迭代器(还有 const 版本) | iterator end() noexcept |
+| rbegin() | 返回指向容器中第一个元素的**前一个位置**的**反向**迭代器(还有一个 const 版本) | reverse_iterator rbegin() noexcept |
+| rend() | 返回指向容器中最后一个位置的**反向**迭代器(还有 const 版本) | reverse_iterator rend() noexcept |
+| find(Keyval) | 查找 Keyval 值，若存在则返回该元素迭代器，没找到返回 end() 迭代器 | iterator find(const _Other& _Keyval) |
+| lower_bound(Keyval) | 返回找到的第一个大于等于 Keyval 的元素的迭代器 | iterator lower_bound(const _Other& _Keyval) |
+| upper_bound(Keyval) | 返回找到的第一个大于 Keyval 的元素的迭代器 | iterator upper_bound(const key_type& _Keyval) |
+| empty() | 判断容器是否为空 | bool empty() const noexcept |
+| size() | 判断元素个数 | size_t size() const noexcept |
+| max_size() | 返回容器能容纳的最多元素个数 | size_t max_size() const noexcept |
+| erase(Keyval) | 删除 Keyval 元素 | iterator erase(iterator _Where) noexcept |
+| swap(set& right) | 交换这两个 set 中的元素 | void swap(set& _Right) noexcept(noexcept(_Mybase::swap(_Right))) |
+| clear() | 清空容器中的元素 | void clear() noexcept |
+| emplace(Keyval) | 直接构造添加 Keyval 元素到容器中，并返回一个迭代器和是否插入成功 | pair<iterator, bool> emplace(_Valtys&&... _Vals) |
 - ### unordered_set 自定义键值
   - 首先看一下 unordered_set 的定义：
 	```C++
@@ -127,7 +146,7 @@ int main() {
 		return 0;
 	}
 	```
-  - #### 通过实现比较函数实现
+  - #### 通过自定义比较函数实现
     ```C++
 	#include <iostream>
 	#include <string>
