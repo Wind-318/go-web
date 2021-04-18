@@ -86,6 +86,7 @@
 - ## [其它](数据结构与算法/其它.md)
 - ## 参考
   - #### [Leetcode](https://leetcode-cn.com/problemset/all/)
+  - #### [二分查找算法详解](https://mp.weixin.qq.com/s/uA2suoVykENmCQcKFMOSuQ)
 ***
 # Linux 攻略
 - TODO
