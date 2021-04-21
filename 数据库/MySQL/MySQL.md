@@ -34,6 +34,20 @@
   - InnoDB 使用 B+ 树作为索引类型，对主键建立**聚簇索引**，聚簇索引叶子节点包含有全部行信息，一张表只能有一个聚簇索引。
   - 非主键索引的叶子节点包含的是一行的主键，所以需要先找到主键值，再到聚簇索引找行信息。
   - 哈希索引：因为只能精确查询，不支持范围查询所以不适合。
+- ## 索引操作
+  - #### 查看索引
+    ```sql
+    SHOW INDEX FROM <表名>
+    ```
+  - #### 创建索引
+    ```sql
+    -- 方括号的为可选字段，默认升序
+    CREATE INDEX <索引名> ON <表名> (<列名> [<长度>] [ ASC | DESC])
+    ```
+  - #### 删除索引
+    ```sql
+    DROP INDEX <索引名> ON <表名>
+    ```
 # 查询优化
 - 限定数据范围
 - 读写分离，主库负责写，从库负责读。
@@ -61,3 +75,4 @@
 # 参考
 - #### [MySQL 教程 | 菜鸟教程](https://www.runoob.com/mysql/mysql-tutorial.html)
 - #### [MySQL](https://github.com/CyC2018/CS-Notes/blob/master/notes/MySQL.md)
+- #### [MySQL 索引](http://c.biancheng.net/view/7890.html)
