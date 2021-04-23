@@ -50,6 +50,8 @@
 - ## Python 连接数据库
 - ## Web 开发
 - ## 爬虫
+  - ### [requests 库](Python/requests.md)
+  - ### [正则表达式](Python/正则表达式.md)
 - ## Web 框架
   - ### Django
 - ## 爬虫框架
