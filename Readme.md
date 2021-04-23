@@ -15,15 +15,16 @@
   - ### [实现一个线程安全的队列](GO/线程安全的队列.go)
   - ### [实现一个无锁队列](GO/无锁队列.go)
   - ### [实现一个线程池](GO/Go%20Web开发/线程池.go)
-- ## Go 连接数据库
-- ## Go Web 开发
+- ## 连接数据库
+- ## Web 开发
   - ### [Go 网络编程](GO/Go%20Web开发/网络编程.md)
   - ### Web 框架
     - #### Gin 框架
     - #### Beego 框架
-- ## Go 可视化库
+- ## 正则表达式
+- ## 可视化库
   - ### Echarts
-- ## Go Gui 编程
+- ## Gui 编程
   - ### Walk
 ***
 # C++ 攻略
@@ -48,7 +49,7 @@
 - ## 三方库
   - ### [jieba](https://github.com/fxsjy/jieba)
   - ### [wordcloud](Python/第三方库/wordcloud.md)
-- ## Python 连接数据库
+- ## 连接数据库
 - ## Web 开发
 - ## 爬虫
   - ### [requests 库](Python/requests.md)
