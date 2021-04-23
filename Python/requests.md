@@ -6,6 +6,6 @@
 
 - ## res 响应对象的方法：
   - **res.status_code**：返回响应状态码
-  - **res.encoding**：定义编码
+  - **res.encoding**：设定编码格式
   - **res.content**：返回请求内容二进制形式
   - **res.text**：返回请求内容的字符串形式
