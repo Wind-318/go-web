@@ -35,7 +35,6 @@ func main() {
 
 	for index, val := range target {
 		url := "https://www.nowcoder.com/discuss/" + val + "?from=zhnkw"
-		url += "1"
 		objs := regexp.MustCompile(`[\/:*?"<>|]`)
 		name[index] = objs.ReplaceAllString(name[index], "")
 
