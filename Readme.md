@@ -4,17 +4,18 @@
 ***
 ## [Markdown 基本语法](https://github.com/younghz/Markdown)
 ***
-## Golang 攻略
-- ### [基本数据类型](GO/基本类型.md)
-- ### [条件语句和循环](GO/条件语句与循环.md)
-- ### [反射与类型断言](GO/反射与类型断言.md)
-- ### [文件操作](GO/文件操作.md)
-- ### [并发](GO/并发.md)
-- ### [练习：](GO/练习.md)
+# Golang 攻略
+- ## [基本数据类型](GO/基本类型.md)
+- ## [条件语句和循环](GO/条件语句与循环.md)
+- ## [反射与类型断言](GO/反射与类型断言.md)
+- ## [文件操作](GO/文件操作.md)
+- ## [并发](GO/并发.md)
+- ## [练习：](GO/练习.md)
   - ### [实现生产者消费者模型](GO/生产者消费者.go)
   - ### [实现一个线程安全的队列](GO/线程安全的队列.go)
   - ### [实现一个无锁队列](GO/无锁队列.go)
   - ### [实现一个线程池](GO/Go%20Web开发/线程池.go)
+- ## GMP 调度模型
 - ## 连接数据库
 - ## Web 开发
   - ### [Go 网络编程](GO/Go%20Web开发/网络编程.md)
@@ -145,6 +146,7 @@
   - #### JamesF.Kurose, KeithW.Ross, 库罗斯, 等. 计算机网络: 自顶向下方法 [M]. 机械工业出版社, 2014.
   - #### W.RichardStevens. TCP/IP 详解. 卷 1, 协议 [M]. 机械工业出版社, 2006.
   - #### [计算机网络](https://github.com/CyC2018/CS-Notes/blob/master/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%20-%20%E7%9B%AE%E5%BD%95.md)
+  - #### [面试题之计算机网络](https://www.nowcoder.com/discuss/468385?source_id=profile_create_nctrack&channel=-1)
 ***
 # 编译原理
 - TODO
