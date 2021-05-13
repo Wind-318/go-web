@@ -101,6 +101,7 @@
 - ## [单例模式](设计模式/单例模式/单例模式.md)
 - ## [简单工厂模式](设计模式/简单工厂/简单工厂.md)
 - ## [工厂模式](设计模式/工厂模式/工厂模式.md)
+- ## [观察者模式](设计模式/观察者模式/观察者模式.md)
 - ## 参考
   - #### [设计模式 | 菜鸟教程 - RUNOOB.COM](https://www.runoob.com/design-pattern/design-pattern-tutorial.html)
 ***
