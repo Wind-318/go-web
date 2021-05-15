@@ -84,8 +84,13 @@
 - ### Cookie
   - 因为 HTTP 是无状态的，而 Web 希望能识别用户身份，为此使用了 Cookie。它允许站点对用户进行跟踪。![](Cookie.jpg)
   - Cookie 可以进行行为跟踪，个性化设置和状态管理等。
+  - **Cookie 被禁用?**
+    - 将 sessionid 附加在 url 后面
 - ### Session
-  - Cookie 存储在用户浏览器中，而 Session 存储在服务器端。
+  - **Cookie 和 session 异同**：
+    - cookie 和 session 都用来跟踪用户
+    - Cookie 用来保存用户信息，session 是通过服务器记录用户状态
+    - cookie 保存在客户端，session 保存在服务器端
 - ### 缓存
   - 缓存通常用来缓解服务器压力，更快地读取数据。缓存既可以存在服务端，也可以存在客户端。
 - ### 代理
