@@ -65,7 +65,12 @@
   - 支持在线热备份
   - 只能对整张表加锁，不支持行级锁
 # 主从复制
-![](主从复制.png)
+- 主数据库用来记录数据，当主数据库故障时可以切换到从数据库，避免服务中断数据丢失，提升了系统的可用性。
+- **原理**：主数据库保存一个 bin-log 文件，记录 sql 语句，在从数据库 relay log 中执行这些 sql 语句即可。
+# 读写分离
+- 在读的需求远大于写需求时使用读写分离
+- 主数据库负责写，从数据库负责读
+- 优点：分摊主数据库压力，提高并发量
 # 切分
 - ## 水平切分
   - 将一个表按行切分到多个表中
@@ -76,3 +81,4 @@
 - #### [MySQL 教程 | 菜鸟教程](https://www.runoob.com/mysql/mysql-tutorial.html)
 - #### [MySQL](https://github.com/CyC2018/CS-Notes/blob/master/notes/MySQL.md)
 - #### [MySQL 索引](http://c.biancheng.net/view/7890.html)
+- #### [数据库的分库分表、读写分离和主从复制](https://www.jianshu.com/p/386db6246525)
