@@ -25,8 +25,7 @@
     - #### Beego 框架
 - ## 可视化库
   - ### Echarts
-- ## Gui 编程
-  - ### Walk
+- ## [Gui 编程(walk)](GO/三方库/walk.md)
 - ## [模拟键鼠操作](GO/三方库/robotgo.md)
 ***
 # C++ 攻略
