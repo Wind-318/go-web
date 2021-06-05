@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
+// 获取请求 url 的 html 页面
 func GetRequest(url string) ([]byte, error) {
 	res, err := http.Get(url)
 	defer res.Body.Close()
