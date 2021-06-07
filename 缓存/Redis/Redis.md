@@ -1,16 +1,68 @@
 # 数据类型
 - ### STRING
-  - Key - Value 型数据
+  - Key - Value 型数据，底层实现为 SDS，相较于 char[] 的优点为：可以更快获取字符串长度，时间复杂度为 $O(1)$；通过 free 判断长度是否足够，不会产生缓冲区溢出；减少了内存重分配次数；二进制安全，可以存储二进制数据。
+    ```C
+      struct sdshdr {
+        // 保存长度
+        int len;
+        // 记录数组未使用长度
+        int free;
+        // 记录字符
+        char buf[];
+      };
+    ```
 - HASH
-  - 以键值对存储的无序列表
+  - 以键值对存储的无序列表，底层由哈希表实现
+    ```C
+      struct dictht {
+        // 哈希表数组
+        dictEntry **table;
+        // 记录哈希表大小
+        unsigned long size;
+        // 用于计算索引值
+        unsigned long sizemask;
+        // 记录已有节点数量
+        unsigned long used;
+      };
+    ```
 - LIST
-  - 链表型结构，可以从两端插入数据
+  - 链表型结构，可以从两端插入数据，底层由双向链表实现
+    ```C
+      struct listNode {
+          // 指向前一个结点
+          struct listNode *prev;
+          // 指向后一个节点
+          struct listNode *next;
+          // 记录节点的值
+          void *value;     
+      };
+      struct list {
+          // 头节点
+          listNode *head;
+          // 尾节点
+          listNode *tail;
+          // 记录节点数量
+          unsigned long len;
+          // 节点值复制函数
+          void *(*dup)(void *ptr);
+          // 节点值释放函数
+          void (*free)(void *ptr);
+          // 节点值对比函数
+          int (*match)(void *ptr,void *key);
+      }；
+    ```
 - SET
-  - 无序集合，会自动去除重复数据
+  - 无序集合，会自动去除重复数据，底层由数组 + 哈希表实现
 - ZSET
-  - 有序集合，相比 SET 存储的数据是有序的
+  - 有序集合，相比 SET 存储的数据是有序的，底层由跳表实现
+  - **跳表**
+    - 是有序集合的底层实现，跳表由多个有序链表组成，从上到下每级链表节点数量依次递减。（图片来源于网络）![](跳表.png)
+    - 查找时，从上层链表开始查找，找到区间后再到下级链表查询
+    - **跳表优点**
+      - 插入速度快
+      - 数据结构容易理解，相对容易实现
 # 语法
-- ## STRING
+- ## STRING 
 | 命令 | 作用 |
 | :--: | :--: |
 | SET key value | 设定指定 key 对应的 value |
@@ -254,12 +306,6 @@ Deep♂Dark♂Fantacy
 # 哨兵
 - 哨兵是一个独立的进程，用来检测 Redis 主从服务器是否正常运行
 # 集群
-# 跳表
-- 是有序集合的底层实现，跳表由多个有序链表组成，从上到下每级链表节点数量依次递减。（图片来源于网络）![](跳表.png)
-- 查找时，从上层链表开始查找，找到区间后再到下级链表查询
-- **跳表优点**
-  - 插入速度快
-  - 数据结构容易理解，相对容易实现
 # 过期时间与淘汰策略
 - ## Redis 有六种淘汰策略
 | 淘汰策略 | 描述 |
@@ -289,7 +335,9 @@ Deep♂Dark♂Fantacy
 - ## 为什么 Redis 这么快？
   - Redis 基于内存操作，数据存放在内存中
   - 非阻塞 I/O，采用 epoll
-  - 单线程避免上下文切换
+  - 单线程避免上下文切换（Redis 4.0 之后后台还有其它线程处理一些操作）
+- ## Redis 多线程
+  - Redis 在 6.0 版本更新了多线程的支持，因单线程导致的 I/O 性能不能满足现有的需要，多线程的出现提高了网络的 I/O 性能
 ***
 # 参考
 - #### [Redis](https://github.com/CyC2018/CS-Notes/blob/master/notes/Redis.md)
