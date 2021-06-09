@@ -17,18 +17,18 @@
   - ### [实现生产者消费者模型](GO/生产者消费者.go)
   - ### [实现一个线程安全的队列](GO/线程安全的队列.go)
   - ### [实现一个无锁队列](GO/无锁队列.go)
-  - ### [实现一个线程池](GO/Go%20Web开发/线程池.go)
+  - ### 实现一个线程池
 - ## [GMP 调度模型](GO/GMP调度模型.md)
-- ## 连接数据库
+- ## [连接数据库](GO/database.md)
 - ## Web 开发
   - ### [Go 网络编程](GO/Go%20Web开发/网络编程.md)
   - ### [正则表达式](GO/正则表达式.md)
-  - ### [GraphQL]
+  - ### [GraphQL](GO/Go%20Web开发/GraphQL.md)
   - ### Web 框架
     - #### Gin 框架
     - #### Beego 框架
-- ## 可视化库
-  - ### Echarts
+- ### Echarts
+- ### logrus
 - ## [Gui 编程(walk)](GO/三方库/walk.md)
 - ## [模拟键鼠操作](GO/三方库/robotgo.md)
 ***
