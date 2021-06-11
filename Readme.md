@@ -29,6 +29,7 @@
     - #### Beego 框架
 - ### Echarts
 - ### logrus
+- ### [gomail](GO/三方库/gomail.md)
 - ## [Gui 编程(walk)](GO/三方库/walk.md)
 - ## [模拟键鼠操作](GO/三方库/robotgo.md)
 ***
