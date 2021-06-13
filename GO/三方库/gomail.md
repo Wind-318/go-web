@@ -43,6 +43,12 @@
         mess.SetBody("text/html", text)
         // 添加附件
         mess.Attach(attachs)
+        // 添加图片
+        /*
+          m := gomail.NewMessage()
+          m.Embed(`图片地址`)
+          m.SetBody("text/html", `<img src="图片名" alt="My image" />`)
+        */
 
         // 发送
         dial := gomail.NewDialer(serverAddr, serverPort, senderAccount, senderPassword)
