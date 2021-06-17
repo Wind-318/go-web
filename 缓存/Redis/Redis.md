@@ -213,38 +213,6 @@
 | SPOP key | 移除并返回集合中的一个随机成员 |
 | SREM key member1 member2 | 移除多个成员 |
 | SRANDMEMBER key count | 返回集合中多个随机数 |
-  - 示例
-> sadd name 野兽先辈 Deep♂Dark♂Fantacy  
-2
-
-> smembers name  
-Deep♂Dark♂Fantacy  
-野兽先辈
-
-> spop name  
-野兽先辈
-
-> sadd name 野兽先辈 Deep♂Dark♂Fantacy  
-2
-
-> smembers name  
-Deep♂Dark♂Fantacy  
-野兽先辈
-
-> spop name  
-野兽先辈
-
-> sadd name1 老八秘制小汉堡 野兽 先辈 野兽先辈  
-4
-
-> sdiff name name1  
-Deep♂Dark♂Fantacy
-
-> sdiff name1 name  
-先辈  
-野兽  
-野兽先辈  
-老八秘制小汉堡
 
 - ## ZSET
 | 命令 | 作用 |
@@ -304,7 +272,8 @@ Deep♂Dark♂Fantacy
     - 加载速度慢
     - 文件体积大
 # 哨兵
-- 哨兵是一个独立的进程，用来检测 Redis 主从服务器是否正常运行
+- 哨兵是一个独立的进程，用来检测 Redis 主从服务器是否正常运行，当检测到主节点宕机时，会选取一个从节点升级为主节点对外提供服务。
+- 新主节点提供服务后，原主节点突然恢复，原主节点会变为从节点。  
 # 集群
 # 过期时间与淘汰策略
 - ## Redis 有六种淘汰策略
@@ -333,6 +302,7 @@ Deep♂Dark♂Fantacy
     - 延长热点 Key 过期时间或者不设置过期时间
 # 常见问题
 - ## 为什么 Redis 这么快？
+  - Redis 单机 QPS 可以达到 10000
   - Redis 基于内存操作，数据存放在内存中
   - 非阻塞 I/O，采用 epoll
   - 单线程避免上下文切换（Redis 4.0 之后后台还有其它线程处理一些操作）
