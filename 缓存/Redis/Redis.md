@@ -2,53 +2,54 @@
 - ### STRING
   - Key - Value 型数据，底层实现为 SDS，相较于 char[] 的优点为：可以更快获取字符串长度，时间复杂度为 $O(1)$；通过 free 判断长度是否足够，不会产生缓冲区溢出；减少了内存重分配次数；二进制安全，可以存储二进制数据。适用场景： key - value 键值对。
     ```C
-      struct sdshdr {
-        // 保存长度
-        int len;
-        // 记录数组未使用长度
-        int free;
-        // 记录字符
-        char buf[];
-      };
+    struct sdshdr {
+      // 保存长度
+      int len;
+      // 记录数组未使用长度
+      int free;
+      // 记录字符
+      char buf[];
+    };
     ```
 - HASH
   - 以键值对存储的无序列表，底层由哈希表实现，适用场景：购物车。
     ```C
-      struct dictht {
-        // 哈希表数组
-        dictEntry **table;
-        // 记录哈希表大小
-        unsigned long size;
-        // 用于计算索引值
-        unsigned long sizemask;
-        // 记录已有节点数量
-        unsigned long used;
-      };
+    struct dictht {
+      // 哈希表数组
+      dictEntry **table;
+      // 记录哈希表大小
+      unsigned long size;
+      // 用于计算索引值
+      unsigned long sizemask;
+      // 记录已有节点数量
+      unsigned long used;
+    };
     ```
 - LIST
   - 链表型结构，可以从两端插入数据，底层由双向链表实现，适用场景：消息队列
-      struct listNode {
-          // 指向前一个结点
-          struct listNode *prev;
-          // 指向后一个节点
-          struct listNode *next;
-          // 记录节点的值
-          void *value;     
-      };
-      struct list {
-          // 头节点
-          listNode *head;
-          // 尾节点
-          listNode *tail;
-          // 记录节点数量
-          unsigned long len;
-          // 节点值复制函数
-          void *(*dup)(void *ptr);
-          // 节点值释放函数
-          void (*free)(void *ptr);
-          // 节点值对比函数
-          int (*match)(void *ptr,void *key);
-      }；
+    ```C
+    struct listNode {
+        // 指向前一个结点
+        struct listNode *prev;
+        // 指向后一个节点
+        struct listNode *next;
+        // 记录节点的值
+        void *value;     
+    };
+    struct list {
+        // 头节点
+        listNode *head;
+        // 尾节点
+        listNode *tail;
+        // 记录节点数量
+        unsigned long len;
+        // 节点值复制函数
+        void *(*dup)(void *ptr);
+        // 节点值释放函数
+        void (*free)(void *ptr);
+        // 节点值对比函数
+        int (*match)(void *ptr,void *key);
+    }；
     ```
 - SET
   - 无序集合，会自动去除重复数据，底层由数组 + 哈希表实现，适用场景：关注、好友等。
