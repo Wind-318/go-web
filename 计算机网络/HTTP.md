@@ -100,6 +100,7 @@
   - **Cookie 被禁用?**
     - 将 sessionid 附加在 url 后面
 - ### Session
+  - 服务器收到请求时，创建一个 session 对象，同时生成一个 sessionid，通过响应头的 set-cookie 命令让客户端设置 cookie 信息。以后每次客户端发送请求时都带上 cookie 信息（和sessionid），服务器通过读取信息，获得 sessionid。但如果服务器有负载均衡，下一个操作请求到另一台服务器时 session 会丢失。
   - **Cookie 和 session 异同**：
     - cookie 和 session 都用来跟踪用户
     - Cookie 用来保存用户信息，session 是通过服务器记录用户状态
