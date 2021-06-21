@@ -1,16 +1,16 @@
 # HTTP 与 I/O
 - ### HTTP(HyperText Transfer Protocol
-  - 超文本传输协议的缩写，是一种应用广泛的网络传输协议。用户使用Http协议，通过浏览器作为客户端向web服务器发送请求。
-  - HTTP是无连接的，指每次连接处理完一个请求后就会断开。
-  - HTTP是无状态的，协议对于事务没有记忆，每次连接都是新连接，与上次无关。
+  - 超文本传输协议的缩写，是一种应用广泛的网络传输协议。用户使用 HTTP 协议，通过浏览器作为客户端向 web 服务器发送请求。
+  - HTTP 是无连接的，指每次连接处理完一个请求后就会断开。
+  - HTTP 是无状态的，协议对于事务没有记忆，每次连接都是新连接，与上次无关。
 - ### HTTP 报文(图片来源于网络)
   ![](http.jpg)
-- ### HTTP请求与响应
+- ### HTTP 请求与响应
   - **请求报文**：发送一个http请求包含以下格式：请求行、请求头部、空行和请求数据。  
     **示例**：
     ```
     Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-US;q=0.7
-    Cookie: JSESSIONID=1F78DFDEDF9EBA5561AABDE63DD158E5; SERVERID=122; JSESSIONID=1AEB986F1EDF83C48AF8BE6BD2D60535
+    Cookie: xxx
     Host: xxx
     Referer: xxx
     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 Edg/89.0.774.54
@@ -49,7 +49,7 @@
   - #### HEAD：只返回响应头的 GET 请求
   - #### POST：向服务器提交表单数据
   - #### GET 请求和 POST 请求的区别
-    - GET 请求将数据放在 URL 中，POST 放在表中。GET 请求无长度限制，只是一般情况下**浏览器**会对 URL 长度作限制导致发送的限制。POST 请求发送数据采用表的形式，GET 请求会将请求头与数据一起发送过去。GET 请求和 POST 请求都不安全，因为 HTTP 是明文传输，想保证安全性要使用 HTTPS。
+    - GET 请求将数据放在 URL 中，POST 放在表中。GET 请求 HTTP 协议不作长度限制，只是一般情况下**浏览器**会对 URL 长度作限制导致发送的限制。POST 请求发送数据采用表的形式，GET 请求会将请求头与数据一起发送过去。GET 请求刷新无害，POST 请求刷新会重新提交数据。GET 请求和 POST 请求都不安全，因为 HTTP 是明文传输，想保证安全性要使用 HTTPS。
 - ### 常见 HTTP 状态码
     | 状态码 | 描述 |
     | :---: | :---: |
