@@ -36,6 +36,7 @@
         // 记录节点的值
         void *value;     
     };
+    
     struct list {
         // 头节点
         listNode *head;
