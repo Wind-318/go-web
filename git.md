@@ -1,0 +1,22 @@
+# GIT
+- ### 初始化仓库
+  - git init
+- ### 远程仓库
+  - #### 添加远程仓库
+    - git remote add 名字（自己取） 远程仓库地址（url）
+  - #### 删除远程仓库
+    - git remote rm 名字
+- ### 添加到暂存区
+  - git add
+- ### 添加到提交区
+  - git commit
+- ### 拉取
+  - #### 从 origin 拉取 main 分支，与本地 mymain 分支合并（与当前分支合并冒号后面的可省略）
+    - git pull origin main:mymain
+- ### 推送
+  - git push
+- ### 合并
+  - git merge
+  - git rebase
+- ### 查看提交记录
+  - git log

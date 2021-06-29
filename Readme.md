@@ -4,6 +4,7 @@
 ***
 ## [Markdown 基本语法](https://github.com/younghz/Markdown)
 ***
+## [Git 与 Github](git.md)
 # Golang 攻略
 - ## [基本数据类型](GO/基本类型.md)
 - ## [条件语句和循环](GO/条件语句与循环.md)
@@ -96,7 +97,7 @@
   - [位运算](数据结构与算法/位运算/位运算.md)
   - [滑动窗口](数据结构与算法/滑动窗口/滑动窗口.md)
   - [分治](数据结构与算法/分治/分治.md)
-- ## [其它](数据结构与算法/其它.md)
+- ## [其它](数据结构与算法/其它/其它.md)
 - ## 参考
   - #### [Leetcode](https://leetcode-cn.com/problemset/all/)
   - #### [二分查找算法详解](https://mp.weixin.qq.com/s/uA2suoVykENmCQcKFMOSuQ)
