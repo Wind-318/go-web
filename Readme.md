@@ -4,7 +4,6 @@
 ***
 ## [Markdown 基本语法](https://github.com/younghz/Markdown)
 ***
-## [Git 与 Github](git.md)
 # Golang 攻略
 - ## [基本数据类型](GO/基本类型.md)
 - ## [条件语句和循环](GO/条件语句与循环.md)
