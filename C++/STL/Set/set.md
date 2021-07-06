@@ -81,7 +81,7 @@
   - 首先看一下 unordered_set 的定义：
 	```C++
 	template <
-	class _Kty, 				// 键值
+	class _Kty, 						// 键值
 	class _Hasher = hash<_Kty>, 		// 哈希函数
 	class _Keyeq = equal_to<_Kty>, 		// 比较函数
 	class _Alloc = allocator<_Kty>		// 分配器
@@ -98,7 +98,6 @@
 	// 自定义类型
 	class MyData {
 	private:
-		friend class hashfunc;
 		int val;
 		string name;
 	public:
@@ -120,18 +119,18 @@
 			this->val = v;
 		}
 
-		// 实现比较
+		// 实现比较，后面要加 const
 		bool operator==(const MyData& d) const {
 			return this->val == d.val && this->name == d.name;
 		}
 
 	};
 
-	// 实现哈希
+	// 实现哈希，后面要加 const
 	class hashfunc {
 	public:
 		size_t operator()(const MyData& d) const {
-			return hash<string>()(d.name) ^ hash<int>()(d.val);
+			return hash<string>()(d.getName()) ^ hash<int>()(d.getVal());
 		}
 	};
 
@@ -156,7 +155,6 @@
 	// 自定义类型
 	class MyData {
 	private:
-		friend class hashfunc;
 		int val;
 		string name;
 	public:
@@ -183,7 +181,7 @@
 	class hashfunc {
 	public:
 		size_t operator()(const MyData& d) const {
-			return hash<string>()(d.name) ^ hash<int>()(d.val);
+			return hash<string>()(d.getName()) ^ hash<int>()(d.getVal());
 		}
 	};
 
@@ -196,7 +194,7 @@
 	};
 
 	int main() {
-		unordered_set <MyData, hashfunc, com> s;
+		unordered_set<MyData, hashfunc, com> s;
 		s.emplace(MyData(15, "张三"));
 		for (const auto& val : s) {
 			cout << val.getName() << "   " << val.getVal() << endl;
