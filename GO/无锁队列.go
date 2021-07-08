@@ -56,7 +56,7 @@ func main() {
 		Head: -1,
 		End:  -1,
 	}
-	for i := 100; i < 205; i++ {
+	for i := 100; i < 200; i++ {
 		wg.Add(1)
 		go func(i int) {
 			defer wg.Done()
@@ -66,7 +66,7 @@ func main() {
 	wg.Wait()
 	fmt.Println(test)
 
-	for i := 0; i < 105; i++ {
+	for i := 0; i < 100; i++ {
 		wg.Add(1)
 		go func() {
 			defer wg.Done()
